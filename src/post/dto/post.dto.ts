@@ -1,6 +1,4 @@
-import { Document } from "mongoose";
-
-export interface Post extends Document{
+export class PostDTO {
     readonly img: String;
     readonly title: String;
     readonly sub_title: String;
