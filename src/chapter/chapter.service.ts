@@ -28,7 +28,7 @@ export class ChapterService {
     }
 
     async getChapters(): Promise<Chapter[]> {
-        const chapters = await this._chapterModel.find({status: {$ne: "DELETE"}});
+        const chapters = await this._chapterModel.find({status: {$ne: "DELETE"}}).populate("posts");
         return chapters;
     }
 
